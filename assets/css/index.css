@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+header{
+    position: sticky;
+    left: 0;
+    right: 0;
+    max-width: 100vw;
+    z-index: 999;
+    transition: transform .3s ease-in-out;
+    top: 0;
+    background: white;
+}
+
+nav {
+    height: 60px;
+    padding: 0 20px;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+}
+
+.logo {
+    display: inline-block;
+}
+.logo img{
+    width: 150px;
+}
+.nav-menu-items ul li{
+    display: inline-block;
+    margin: 16px 0;
+    padding: 0 16px;
+}
+
+.nav-menu-items ul li a{
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nav-menu-icons{
+    position: relative;
+}
+.nav-menu-icons a{
+    /* font-size: 27px; */
+    text-decoration: none;
+    color: black;
+    padding: 17px 10px;
+    height: 100%;
+}
+.nav-menu-icons a:hover{
+    text-decoration: none;
+    color: #be1e2d;
+    padding: 17px 10px;
+    height: 100%;
+}
+
+.nav-menu-icons a i{
+    padding: 0 !important;
+    font-size: 27px;
+}
+.nav-menu-icons a:hover .icon-hover{
+    visibility: visible;
+    left: -50px;
+    top: 40px;
+    right: 0;
+    bottom: 0;
+}
+.icon-hover{
+    visibility: hidden;
+    display:block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
