@@ -1,0 +1,30 @@
+
+@media only screen and (min-width: 200px) and (max-width: 992px) {
+    .slicknav_menu {
+      display: block;
+    }
+  
+    .inner_main_menu {
+      display: none;
+    }
+  
+    .logo_area {
+      height: auto;
+      left: -57px;
+      margin-left: 0;
+      position: relative;
+      top: 0;
+      width: 130px;
+    }
+  
+    .logo_area img {
+      height: auto;
+      width: 100px;
+    }
+    .sale-items{
+      /* margin: 0 auto; */
+      width: 164px;
+    }
+  }
+  
+  

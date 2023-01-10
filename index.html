@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/font-awesome.css">
     <link rel="stylesheet" href="Icon-font-7-stroke-PIXEDEN-v-1.2.0/assets/Pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
     <link rel="stylesheet" href="assets/css/index.css">
     <title>Document</title>
 </head>
@@ -26,19 +31,189 @@
                     <li><a href="#">Sale</a></li>
                 </ul>
             </div>
-            <div class="nav-menu-icons">
-                <a href=""><i class="ii-icon pe-7s-user"></i>
-                    
-                </a>
-                <a href=""><i class="ii-icon pe-7s-shopbag"></i>
-                    <div class="icon-hover">
-                        Cart
-                    </div></a>
-                <a href=""><i class="ii-icon pe-7s-like"></i></a>
-                <a href=""><i class="ii-icon pe-7s-search"></i></a>
+            <div class="nav-menus d-flex">
+                <div class="nav-menu-icons">
+                    <a href=""><i class="ii-icon pe-7s-user"></i>
+                        <div class="icon-hover">
+                            Sign In
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-menu-icons">
+                    <a href=""><i class="ii-icon pe-7s-shopbag"></i>
+                        <div class="icon-hover">
+                            Cart
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-menu-icons">
+                    <a href=""><i class="ii-icon pe-7s-like"></i>
+                        <div class="icon-hover">
+                            Wishlist
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-menu-icons">
+                    <a href=""><i class="ii-icon pe-7s-search"></i>
+                        <div class="icon-hover">
+                            Search
+                        </div>
+                    </a>
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
+
+    <section class="sec-1 " >
+        <div class="single-item">
+            <div class="slide">
+                <img src="assets/imgs/6.jpg" alt="">
+            </div>
+            <div class="slide">
+                <video src="assets/imgs/home-video.webm"></video>
+            </div>
+        </div>
+    </section>
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="mx-auto ">
+                    <h2 class="py-5 text-center">
+                        Pick Your Style
+                    </h2>
+                </div>
+                <div class="py-5 d-flex homeslider">
+                    <div class="slide">
+                        <div class="col-md-3">
+                            <div class="sale-items" style="width: 238px;">
+                                <a href="#" class="sale-item">
+                                    <div class="sale-item-img">
+                                        <img src="assets/imgs/sale-home.jpg" alt="img">
+                                    </div>
+                                    <h5>Sale</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="col-md-3">
+                            <div class="sale-items" style="width: 238px;">
+                                <a href="#" class="sale-item">
+                                    <div class="sale-item-img">
+                                        <img src="assets/imgs/casual-home.jpg" alt="img">
+                                    </div>
+                                    <h5>Casual</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="col-md-3">
+                            <div class="sale-items" style="width: 238px;">
+                                <a href="#" class="sale-item">
+                                    <div class="sale-item-img">
+                                        <img src="assets/imgs/indo-home.jpg" alt="img">
+                                    </div>
+                                    <h5>Indo-Western</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="col-md-3">
+                            <div class="sale-items" style="width: 238px;">
+                                <a href="#" class="sale-item">
+                                    <div class="sale-item-img">
+                                        <img src="assets/imgs/indian-home.jpg" alt="img">
+                                    </div>
+                                    <h5>Indian</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('.homeslider').slick({
+                dots: true,
+                infinite: false,
+                speed: 300,
+                autoplay: true,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            autoplay: true,
+                            slidesToShow: 4,
+                            slidesToScroll: 4,
+                            infinite: false,
+                            dots: false,
+                            // arrows:false
+                        }
+                    },
+                    {
+                        breakpoint: 800,
+                        settings: {
+
+                            autoplay: true,
+                            // arrows:false,
+                            infinite: false,
+                            slidesToShow: 3,
+                            slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            autoplay: true,
+                            arrows: false,
+                            infinite: false,
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            infinite: false,
+                            autoplay: true,
+                            arrows: false,
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
+
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.single-item').slick({
+                dots: true,
+                infinite: false,
+                speed: 300,
+                autoplay: true,
+                arrows:false
+            });
+        });
+    </script>
+
 </body>
 
 </html>

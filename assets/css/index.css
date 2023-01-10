@@ -1,4 +1,5 @@
-*{
+* {
+    /* overflow: hidden; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +7,7 @@
     list-style: none;
 }
 
-header{
+header {
     position: sticky;
     left: 0;
     right: 0;
@@ -32,56 +33,178 @@ nav {
 .logo {
     display: inline-block;
 }
-.logo img{
+
+.logo img {
     width: 150px;
 }
-.nav-menu-items ul li{
+.nav-menu-items ul{
+    margin-bottom: 0 !important;
+}
+.nav-menu-items ul li {
     display: inline-block;
     margin: 16px 0;
     padding: 0 16px;
 }
 
-.nav-menu-items ul li a{
+.nav-menu-items ul li a {
     font-size: 18px;
     color: #000;
     text-decoration: none;
     text-align: center;
 }
+.nav-menu-items ul li a:hover{
+    font-size: 18px;
+    color: #be1e2d;
+    text-decoration: none;
+    text-align: center;
+}
 
-.nav-menu-icons{
+.nav-menu-icons {
     position: relative;
 }
-.nav-menu-icons a{
+
+.nav-menu-icons a {
     /* font-size: 27px; */
     text-decoration: none;
     color: black;
     padding: 17px 10px;
     height: 100%;
 }
-.nav-menu-icons a:hover{
+
+.nav-menu-icons a:hover {
     text-decoration: none;
     color: #be1e2d;
     padding: 17px 10px;
     height: 100%;
 }
 
-.nav-menu-icons a i{
+.nav-menu-icons a i {
     padding: 0 !important;
     font-size: 27px;
 }
-.nav-menu-icons a:hover .icon-hover{
+
+.nav-menu-icons a:hover .icon-hover {
     visibility: visible;
+    transform: translate(-50%, 24px);
+    transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    opacity: 1;
+}
+
+
+.single-item .slide img,video{
+    width: 100%;
+}
+
+.single-item .slide video{
+    max-height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* .icon-hover{
+    box-shadow: 0px 0px 5px #0000001f;
+    font-size: 12px;
+    background:      white;
+    color: #be1e2d;
+    padding: 2px 8px;
+    visibility: hidden;
+    display:inline;
+    position: absolute;
     left: -50px;
     top: 40px;
     right: 0;
     bottom: 0;
-}
-.icon-hover{
-    visibility: hidden;
-    display:block;
+} */
+.icon-hover {
     position: absolute;
-    left: 0;
+    background: white;
+    white-space: nowrap;
+    font-size: 12px;
+    text-align: center;
+    left: 25px;
+    top: 15px;
+    /* bottom: 0px; */
+    -webkit-transform: translate(-50%, 30px);
+    -ms-transform: translate(-50%, 30px);
+    transform: translate(-50%, 30px);
+    -webkit-box-shadow: 0px 0px 5px #0000001f;
+    box-shadow: 0px 0px 5px #0000001f;
+    padding: 10px 8px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+
+.icon-hover::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    -webkit-transform: translate(-50%, -6px) rotate(45deg);
+    -ms-transform: translate(-50%, -6px) rotate(45deg);
+    transform: translate(-50%, -6px) rotate(45deg);
+    z-index: 0;
+    -webkit-box-shadow: -1px -1px 1px #0000001f;
+    box-shadow: -1px -1px 1px #0000001f;
+}
+
+
+.sale-items {
+    width: 238px;
+}
+
+.sale-item {
+    color: #000;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    padding: 20px;
+}
+
+a.sale-item:hover {
+    text-decoration: none;
+    color: #be1e2d;
+}
+
+.sale-item-img {
+    padding-top: 100%;
+    border-radius: 50%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    transform: scale(1);
+    transition: all 0.3s linear;
+    -webkit-box-shadow: -3px 3px 0px 0px #ffcf40;
+    box-shadow: -3px 3px 0px 0px #ffcf40;
+}
+
+.sale-item-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.sale-item-img:hover {
+    transform: scale(1.04);
+    -webkit-box-shadow: 0px 0px 10px 0px lightgrey;
+    box-shadow: 0px 0px 10px 0px lightgrey;
+}
+
+.sale-item h5 {
+    margin-top: 16px;
+    font-size: 16px;
+    /* color: #000; */
+    text-align: center;
 }
