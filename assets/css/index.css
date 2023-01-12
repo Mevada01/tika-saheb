@@ -6,18 +6,21 @@
     text-decoration: none;
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
     color: currentColor;
 }
-.go-top{
+
+.go-top {
     display: inline;
     position: sticky;
     bottom: 25px;
     left: 25px;
     background-color: #be1e2d;
 }
-.go-top i{
+
+.go-top i {
     color: #fff;
     font-size: 20px;
 }
@@ -72,7 +75,7 @@ nav {
 }
 
 .nav-menu-items ul li a:hover {
-    font-size: 18px;
+    font-size: 17px;
     color: #be1e2d;
     text-decoration: none;
     text-align: center;
@@ -174,6 +177,7 @@ video {
 
 
 .sale-items {
+    /* margin-right: 200px; */
     width: 238px;
 }
 
@@ -245,9 +249,11 @@ a.sale-item:hover {
 }
 
 .handpicked-items .hover-img {
+    width: 240px;
+    height: 360px;
     -webkit-transition: opacity 0.3s ease-in-out;
     -o-transition: opacity 0.3s ease-in-out;
-    transition: opacity 0.3s ease-in-out;   
+    transition: opacity 0.3s ease-in-out;
     position: absolute;
     opacity: 0;
     z-index: 1;
@@ -259,10 +265,167 @@ a.sale-item:hover {
     opacity: 1;
 }
 
+.handpicked-items .handi-info {
+    text-align: center;
+    width: 100%;
+    padding: 13px;
+    background-color: white;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    margin-bottom: 50px;
+}
 
+.handpicked-items:hover .handi-info {
+    max-height: 172px;
+    max-height: 142px;
+    -webkit-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    transform: translateY(-50px);
+    margin-bottom: 0px;
+    background-color: white;
+    position: absolute;
+    z-index: 99;
+}
+
+.handpicked-items .handi-info .handi-name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    line-height: normal;
+}
+
+.handpicked-items .handi-info .handi-price span.sell-price {
+    color: #be1e2d;
+    font-size: 17px;
+    display: inline-block;
+}
+
+.handpicked-items .handi-info .handi-price del.del-price {
+    color: gray;
+    text-decoration: line-through;
+    margin-left: 5px;
+    font-weight: 300;
+
+}
+
+.handpicked-items:hover a.add-to-cart,
+a.add-to-wishlist{
+    visibility: visible;
+    opacity: 1;
+}
+
+.handi-info .add-to-cart{
+    visibility: hidden;
+    opacity: 0;
+}
+.handpicked-items a.add-to-wishlist{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.handpicked-items:hover a.add-to-wishlist {
+    visibility: visible;
+    opacity: 1;
+}
+.handpicked-items:hover a.view-btn {
+    visibility: visible;
+    opacity: 1;
+}
+
+.handpicked-items a.view-btn{
+    visibility: hidden;
+    opacity: 0;
+}
+.handi-info .add-to-cart {
+    background-color: #ffcf40;
+    color: #000;
+    padding: 7px 8px;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    font-weight: normal;
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.handi-info a.add-to-cart .cart-icon {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.handpicked-items a.view-btn,
+.handpicked-items a.add-to-wishlist {
+    width: 40px;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+    color: #000;
+    font-size: 22px;
+    position: absolute;
+    right: 13px;
+    z-index: 99;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.handpicked-items  a.view-btn.active,
+.handpicked-items  a.add-to-wishlist.active,
+.handpicked-items  a.view-btn:hover,
+.handpicked-items  a.add-to-wishlist:hover {
+    background-color: #be1e2d;
+    color: white;
+    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.295);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.295);
+}
+
+.handpicked-items a.add-to-wishlist {
+    top: 13px;
+}
+
+.handpicked-items a.view-btn {
+    top: 65px;
+}
+
+
+
+
+/* 
 .card {
-    /* width: 280px;
-    height: 360px; */
+    width: 280px;
+    height: 360px;
     border-radius: 15px;
     padding: 1.5rem;
     background: white;
@@ -282,8 +445,8 @@ a.sale-item:hover {
 }
 
 .card:hover .info {
-    /* margin-top: 50px;
-    padding-top: 50px; */
+    margin-top: 50px;
+    padding-top: 50px;
     opacity: 1;
     transform: translateY(0px);
 }
@@ -350,3 +513,4 @@ a.sale-item:hover {
     background: dodgerblue;
     color: white;
 }
+ */
