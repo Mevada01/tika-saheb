@@ -910,8 +910,19 @@ a.offer-banner {
 } */
 
 
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 7.5px;
+    padding-right: 7.5px
+}
 
-/* .container-fluid:before,
+.row {
+    margin-left: -7.5px;
+    margin-right: -7.5px
+}
+
+.container-fluid:before,
 .container-fluid:after,
 .row:before,
 .row:after {
@@ -922,7 +933,7 @@ a.offer-banner {
 .container-fluid:after,
 .row:after {
     clear: both
-} */
+}
 
 .col,
 .col-sm-12,
@@ -1230,12 +1241,11 @@ button:focus {
     text-align: left
 }
 
-/* 
 a,
 a:active {
     color: #0081FF;
     text-decoration: none
-} */
+}
 
 a:hover,
 a:focus {
@@ -1673,7 +1683,7 @@ a[href]:focus {
     position: relative;
     top: 0;
     visibility: hidden;
-    width: 1200px;
+    width: 1200px
 }
 
 #es-carousel .jssor_carousel_slider .embed_jssor_slides {
@@ -1758,45 +1768,6 @@ a[href]:focus {
     width: 1200px;
 }
 
-/* #es-carousel {
+#es-carousel {
     padding: 0;
-} */
-
-.review-item {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.review-item img {
-    width: 150px !important;
-    height: 150px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: center;
-    object-position: center;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
-    transition: -webkit-box-shadow 0.3s ease-in-out;
-    -o-transition: box-shadow 0.3s ease-in-out;
-    transition: box-shadow 0.3s ease-in-out;
-    transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
-    -webkit-box-shadow: -3px 3px 0px 0px #ffcf40;
-    box-shadow: -3px 3px 0px 0px #ffcf40;
-    margin: auto;
-    margin-bottom: 25px;
-}
-
-div.reviews-s-bx i.active,
-.detail-right p.reviews-bx i.active {
-    color: #fece40;
-}
-
-.review-item p{
-    font-size: 16px;
-    font-weight: 600;
-    padding: 15px 50px;
-    width: 100%;
-    text-align: center;
 }
