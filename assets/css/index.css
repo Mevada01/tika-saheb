@@ -12,6 +12,10 @@ a {
     color: currentColor;
 }
 
+a:hover {
+    color: currentColor;
+}
+
 .go-top {
     display: inline;
     position: sticky;
@@ -314,16 +318,17 @@ a.sale-item:hover {
 }
 
 .handpicked-items:hover a.add-to-cart,
-a.add-to-wishlist{
+a.add-to-wishlist {
     visibility: visible;
     opacity: 1;
 }
 
-.handi-info .add-to-cart{
+.handi-info .add-to-cart {
     visibility: hidden;
     opacity: 0;
 }
-.handpicked-items a.add-to-wishlist{
+
+.handpicked-items a.add-to-wishlist {
     visibility: hidden;
     opacity: 0;
 }
@@ -332,15 +337,17 @@ a.add-to-wishlist{
     visibility: visible;
     opacity: 1;
 }
+
 .handpicked-items:hover a.view-btn {
     visibility: visible;
     opacity: 1;
 }
 
-.handpicked-items a.view-btn{
+.handpicked-items a.view-btn {
     visibility: hidden;
     opacity: 0;
 }
+
 .handi-info .add-to-cart {
     background-color: #ffcf40;
     color: #000;
@@ -401,10 +408,10 @@ a.add-to-wishlist{
 
 
 
-.handpicked-items  a.view-btn.active,
-.handpicked-items  a.add-to-wishlist.active,
-.handpicked-items  a.view-btn:hover,
-.handpicked-items  a.add-to-wishlist:hover {
+.handpicked-items a.view-btn.active,
+.handpicked-items a.add-to-wishlist.active,
+.handpicked-items a.view-btn:hover,
+.handpicked-items a.add-to-wishlist:hover {
     background-color: #be1e2d;
     color: white;
     -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.295);
@@ -419,8 +426,66 @@ a.add-to-wishlist{
     top: 65px;
 }
 
+.top-seller {
+    background-color: #ffcf40;
+    color: #000;
+    padding: 8px 18px;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    font-weight: normal;
+    display: block;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    margin-top: 5px;
+}
 
+.recent-view {
+    background-color: #dbdBDB;
+    color: #343434;
+    padding: 7px 18px;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    font-weight: normal;
+    display: block;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    margin-top: 5px;
+}
 
+.recent-view:hover {
+    color: black;
+    background-color: #ffcf40;
+}
 
 /* 
 .card {
@@ -514,3 +579,27 @@ a.add-to-wishlist{
     color: white;
 }
  */
+
+
+a.offer-banner {
+    text-decoration: none;
+
+}
+
+.offer-banner {
+   
+    padding-top: 50%;
+}
+
+.offer-banner:hover img{
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+.offer-banner img {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+    border-radius: 10px;
+    width: 100%;
+}
