@@ -42,8 +42,8 @@
     display: none;
   }
 
-  .resposive-menu-bx {  
-    display: none;
+  .resposive-menu-bx {
+    display: block;
   }
 }
 

@@ -67,7 +67,7 @@
                     </a>
                     </a>
                 </div>
-                <div class="menu-icon resp-menu-icon">
+                <div class="menu-icon resp-menu-icon" onclick="openmenu()">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -78,13 +78,13 @@
 
     <!-------------------------resposive-menu -------------------------------->
 
-    <section class="resposive-menu-bx active">
+    <section class="resposive-menu-bx " onclick="closemenu()" id="sidemenu">
         <span class="dismiss closes-bgcb" style="left: 12px; top: 12px; width: 20px; height: 20px;">
             <span class="closes"></span>
             <span class="closes"></span>
         </span>
         <a href="/" class="res-logo">
-            <img src="/img/logo/logo.png" alt="">
+            <img src="assets/imgs/logo.png" alt="">
         </a>
         <div class="res-menu-item-bx">
             <ul class="res-menu-item-ul">
@@ -112,10 +112,8 @@
                         </svg>
                     </a>
                     <div class="drop-menu" style="display: none;">
-                        <a class="dm-link" href="/indo-western">All<i class="fa fa-angle-right"
-                                aria-hidden="true"></i></a>
-                        <a class="dm-link" href="/corsets">Corsets<i class="fa fa-angle-right"
-                                aria-hidden="true"></i></a>
+                        <a class="dm-link" href="">All<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a class="dm-link" href="">Corsets<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
                 </li>
                 <li class="category-li">
@@ -126,66 +124,36 @@
                         </svg>
                     </a>
                     <div class="drop-menu" style="display: none;">
-                        <a class="dm-link" href="/casual">All<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                        <a class="dm-link" href="/shirts">Shirts<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a class="dm-link" href="">All<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a class="dm-link" href="">Shirts<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
                 </li>
                 <li>
-                    <a class="res-nav-link" href="/sale">Sale <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <a class="res-nav-link" href="">Sale <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </a>
                 </li>
-
-                <!--<li class="category-li">
-                    <a class="res-nav-link" href="#">Indian
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"></path></svg>
-                    </a>
-                    <div class="drop-menu">
-                        <a class="dm-link" href="#">all<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                        <a class="dm-link" href="#">Kurta<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                    </div>
-                </li>
-                <li>
-                    <a class="res-nav-link" href="#">Indo Western
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li class="category-li">
-                    <a class="res-nav-link" href="#">Dresses
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="res-nav-link" href="#">Tops & Shirts
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li class="category-li">
-                    <a class="res-nav-link" href="#">Lenghas
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    </a>
-                </li>-->
             </ul>
 
             <ul class="res-menu-item-ul">
                 <h6>Company Info</h6>
-                <li><a class="res-nav-link active" href="/">Home<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <li><a class="res-nav-link active" href="index.html">Home<i class="fa fa-angle-right"
+                            aria-hidden="true"></i></a>
                 </li>
-                <li><a class="res-nav-link " href="/about-us">About<i class="fa fa-angle-right"
-                            aria-hidden="true"></i></a></li>
+                <li><a class="res-nav-link " href="">About<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                 <!-- <li><a class="res-nav-link res-product-link " href="/products">Product<i class="fa fa-angle-right" aria-hidden="true"></i></a></li> -->
                 <!--<li><a class="res-nav-link res-product-link  " href="javascript:void(0);">Category<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>-->
-                <li><a class="res-nav-link " href="/blog">Media<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <li><a class="res-nav-link " href="">Media<i class="fa fa-angle-right" aria-hidden="true"></i></a>
                 </li>
-                <li><a class="res-nav-link ds-css" href="/faqs">FAQ<i class="fa fa-angle-right"
+                <li><a class="res-nav-link ds-css" href="">FAQ<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </li>
+                <li><a class="res-nav-link " href="">Privacy Policy<i class="fa fa-angle-right"
                             aria-hidden="true"></i></a></li>
-                <li><a class="res-nav-link " href="/privacy-policy">Privacy Policy<i class="fa fa-angle-right"
+                <li><a class="res-nav-link " href="/">Return Policy<i class="fa fa-angle-right"
                             aria-hidden="true"></i></a></li>
-                <li><a class="res-nav-link " href="/return-policy">Return Policy<i class="fa fa-angle-right"
+                <li><a class="res-nav-link ds-css" href="">Terms &amp; Conditions<i class="fa fa-angle-right"
                             aria-hidden="true"></i></a></li>
-                <li><a class="res-nav-link ds-css" href="/terms-conditions">Terms &amp; Conditions<i
-                            class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                <li><a class="res-nav-link " href="/contact-us">Contact<i class="fa fa-angle-right"
-                            aria-hidden="true"></i></a></li>
+                <li><a class="res-nav-link " href="">Contact<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </li>
                 <!-- <li><a class="res-nav-link " href="/sitemap">Sitemap<i class="fa fa-angle-right" aria-hidden="true"></i></a></li> -->
             </ul>
             <ul class="res-menu-item-ul">
@@ -216,14 +184,14 @@
             </ul>
         </div>
         <div class="res-menu-social-link">
-            <a href="https://www.facebook.com/Tikasaheb-106893805263965/" target="_blank"><i class="fa fa-facebook"
+            <a href="https://www.facebook.com/Tikasaheb-106893805263965/" target="_blank"><i class="fa-brands fa-facebook-f"
                     aria-hidden="true"></i></a>
-            <a href="https://twitter.com/tikasaheb" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/tikasaheb/" target="_blank"><i class="fa fa-instagram"
+            <a href="https://twitter.com/tikasaheb" target="_blank"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/tikasaheb/" target="_blank"><i class="fa-brands fa-instagram"
                     aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/company/tikasaheb/" target="_blank"><i class="fa fa-linkedin"
+            <a href="https://www.linkedin.com/company/tikasaheb/" target="_blank"><i class="fa-brands fa-linkedin"
                     aria-hidden="true"></i></a>
-            <a href="https://pin.it/3C1H97E" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+            <a href="https://pin.it/3C1H97E" target="_blank"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a>
         </div>
     </section>
     <section class="sec-1 ">
@@ -4144,7 +4112,16 @@
                 });
             });
         </script>
+        <script>
+            var sidemenu = document.getElementById("sidemenu")
 
+            function openmenu() {
+                sidemenu.style.right = "0";
+            }
+            function closemenu() {
+                sidemenu.style.right = "-400px";
+            }
+        </script>
 </body>
 
 </html>
