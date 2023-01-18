@@ -2,8 +2,8 @@
     font-family: 'wokiee_icons';
     src: url('/fonts/wokiee_icons.eot?87a912');
     src: url('fonts/wokiee_icons.eot?87a912#iefix') format('embedded-opentype'),
-        url('/assets/fonts/wokiee_icons.ttf') format('truetype'),
-        url('/assets/fonts/wokiee_icons.ttf') format('woff'),
+        url('../fonts/wokiee_icons.ttf') format('truetype'),
+        url('../fonts/wokiee_icons.ttf') format('woff'),
         url('/fonts/wokiee_icons.svg?87a912#wokiee_icons') format('svg');
     font-weight: normal;
     font-style: normal;
