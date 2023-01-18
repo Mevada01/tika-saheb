@@ -91,7 +91,7 @@ nav {
 }
 
 .nav-menu-icons a {
-    /* font-size: 27px; */
+    font-size: 27px;
     text-decoration: none;
     color: black;
     padding: 17px 10px;
@@ -2398,14 +2398,61 @@ footer {
     color: red;
 }
 
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
     z-index: 20;
 
 }
-.slick-next{
+
+.slick-next {
     right: 0;
 }
 
-.slick-prev{
+.slick-prev {
     left: 0;
+}
+
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid rgb(212, 186, 186); */
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* margin-left: 5px; */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 7px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-icon span {
+    width: 100%;
+    height: 3px;
+    background-color: gray;
+    /* border: 1px solid #727272; */
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    display: block;
+    border-radius: 30px;
+}
+
+.menu-icon:hover span {
+    background-color: #be1e2d;
+}
+
+.resposive-menu-bx.active {
+    right: 0;
+}
+.resposive-menu-bx{
+    display: none;
 }
