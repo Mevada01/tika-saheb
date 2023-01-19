@@ -1816,16 +1816,25 @@ div.reviews-s-bx i.active,
 
 .slick-prev:before,
 .slick-next:before {
+    /* padding: 0 !important; */
+    border-radius: 50%;
+    color: currentColor;
+    font-size: 20px;
+}
+
+.slick-prev{
     padding: 0 !important;
     border-radius: 50%;
-    color: red !important;
-    /* background-color: #eee; */
+    color: red;
+    background: #eee;
+    /* font-size: 20px; */
 }
 
 .slick-next:hover,
 .slick-prev:hover {
-    /* background-color: #be1e2d; */
-    color: white;
+    /* border-radius: 50%; */
+    background: #be1e2d !important;
+    color: white !important;
 }
 
 div.reviews-s-bx i,
@@ -1834,6 +1843,30 @@ div.reviews-s-bx i,
     font-size: 16px;
     margin-right: 2px;
 }
+
+.slick-next, .slick-prev{
+    background: white;
+    border-radius: 50%;
+    color: #be1e2d;
+}
+
+
+.slick-prev,
+.slick-next {
+    z-index: 20;
+
+}
+
+.slick-next {
+    right: 25px;
+    top: 40%;
+}
+
+.slick-prev {
+    left: 25px;
+    top: 40%;
+}
+
 
 .blog-item-bx {
     border-radius: 5px;
@@ -2403,20 +2436,6 @@ footer {
     color: red;
 }
 
-.slick-prev,
-.slick-next {
-    z-index: 20;
-
-}
-
-.slick-next {
-    right: 0;
-}
-
-.slick-prev {
-    left: 0;
-}
-
 .menu-icon {
     width: 40px;
     height: 40px;
@@ -2833,3 +2852,16 @@ footer {
     -ms-transform: rotate(135deg);
     transform: rotate(135deg);
 }
+
+.slick-slider .slick-arrow{
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    transform: scale(1.2);
+}
+
+.slick-slider:hover .slick-arrow{
+    visibility: visible;
+    opacity: 1;
+}
+
