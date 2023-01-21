@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .owl-carousel .yc {
+            padding: 50%;
+            justify-content: space-between;
+        }
+
+
+        .product-item {
+            position: relative;
+        }
+
+        .product-item .product-imgs {
+            padding-top: 123%;
+            display: block;
+            position: relative;
+            background-image: url("/img/logo/logo-gray.png"), -o-linear-gradient(left, #f7f7f7 0px, #efefef 40px, #f7f7f7 80px);
+            background-image: url("/img/logo/logo-gray.png"), linear-gradient(90deg, #f7f7f7 0px, #efefef 40px, #f7f7f7 80px);
+            background-position: center, left;
+            background-repeat: no-repeat, repeat;
+            background-size: 25%, 900px;
+            -webkit-animation: shine-lines2 1.6s infinite linear;
+            animation: shine-lines2 1.6s infinite linear;
+        }
+
+        .product-item .product-imgs .product-hover-img,
+        .product-item .product-imgs .product-main-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -o-object-position: center;
+            object-position: center;
+            -webkit-transition: opacity 0.3s ease-in-out;
+            -o-transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
+            width: 100%;
+            height: 100%;
+        }
+
+        .product-item .product-imgs .product-hover-img {
+            opacity: 0;
+        }
+
+        .product-item:hover .product-imgs .product-hover-img {
+            opacity: 1;
+        }
+
+
+        .product-info {
+            position: relative;
+            padding: 10px;
+            overflow: hidden;
+            background-color: white;
+            -webkit-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+            margin-bottom: 50px;
+        }
+
+        .product-info>a {
+            display: block;
+        }
+
+        .product-info .start-bx {
+            text-align: center;
+            display: none;
+        }
+
+        .product-info .start-bx .start-icon {
+            color: gray;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .product-info .start-bx .start-icon.active {
+            color: #ffcf40;
+        }
+
+        .product-info .product-name {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 5px;
+            line-height: normal;
+        }
+
+        .product-info .product-price-bx {
+            text-align: center;
+        }
+
+        .product-info .product-price-bx del.del-price,
+        .product-info .product-price-bx span.sell-price {
+            font-size: 17px;
+            display: inline-block;
+        }
+
+        .product-info .product-price-bx span.sell-price {
+            color: #be1e2d;
+        }
+
+        .product-info .product-price-bx del.del-price {
+            color: gray;
+            text-decoration: line-through;
+            margin-left: 5px;
+            font-weight: 300;
+        }
+
+        .product-info a.add-to-cart {
+            background-color: #ffcf40;
+            color: #000;
+            padding: 7px 8px;
+            border-radius: 5px;
+            -webkit-transition: all 0.3s linear;
+            -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+            font-weight: normal;
+            display: block;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            margin: auto;
+            margin-top: 5px;
+        }
+
+        .product-item .product-info a.add-to-cart:hover {
+            background-color: #ffcb2f;
+        }
+
+        .product-info a.add-to-cart .cart-icon {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+
+        .product-item a.view-btn,
+        .product-item a.add-to-wishlist {
+            width: 40px;
+            height: 40px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: white;
+            color: #000;
+            font-size: 22px;
+            position: absolute;
+            right: 13px;
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+
+
+        .product-item a.view-btn.active,
+        .product-item a.add-to-wishlist.active,
+        .product-item a.view-btn:hover,
+        .product-item a.add-to-wishlist:hover {
+            background-color: #be1e2d;
+            color: white;
+            -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.295);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.295);
+        }
+
+        .product-item a.add-to-wishlist {
+            top: 13px;
+        }
+
+        .product-item a.view-btn {
+            top: 65px;
+        }
+
+        @media screen and (min-width:768px) {
+            .product-info {
+                max-height: 92px;
+            }
+
+            .product-item:hover .product-info {
+                /* max-height: 172px; */
+                max-height: 142px;
+                -webkit-transform: translateY(-50px);
+                -ms-transform: translateY(-50px);
+                transform: translateY(-50px);
+                margin-bottom: 0px;
+            }
+
+            .product-item .product-info a.add-to-cart,
+            .product-item a.view-btn,
+            .product-item a.add-to-wishlist {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .product-item:hover .product-info a.add-to-cart,
+            .product-item:hover a.view-btn,
+            .product-item:hover a.add-to-wishlist {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        @media screen and (min-width:992px) {
+            .res-cc-bx {
+                display: none !important;
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            .product-info {
+                max-height: 92px;
+            }
+
+            .product-item:hover .product-info {
+                /* max-height: 172px; */
+                max-height: 142px;
+                -webkit-transform: translateY(-50px);
+                -ms-transform: translateY(-50px);
+                transform: translateY(-50px);
+                margin-bottom: 0px;
+            }
+
+            .product-item .product-info a.add-to-cart,
+            .product-item a.view-btn,
+            .product-item a.add-to-wishlist {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .product-item:hover .product-info a.add-to-cart,
+            .product-item:hover a.view-btn,
+            .product-item:hover a.add-to-wishlist {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        @media screen and (min-width:360px) {
+            .d-xsm-block {
+                display: block !important;
+            }
+        }
+
+
+        @media (max-width:1200px) {
+            .sitemap-ul li {
+                width: 24%;
+            }
+        }
+
+
+        /* @media (max-width:1110px) {
+    .mega-menu-bx {
+        width: 992px;
+    }
+} */
+
+        @media (max-width:992px) {
+
+            .menu-bx,
+            .mega-menu-bx {
+                display: none;
+            }
+
+            .icons-bx {
+                right: 5px;
+            }
+
+            .menu-icon {
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+            }
+
+            .overlay-commun.menu-active,
+            .resposive-menu-bx {
+                display: block;
+            }
+
+            /* search page css */
+            .search-right {
+                width: 100%;
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+            }
+
+            .search-left {
+                position: fixed;
+                right: -300px;
+                z-index: 1100;
+                top: 0;
+                height: 100vh;
+            }
+
+            .search-left.active {
+                right: 0px;
+            }
+
+            .filter-menu-icon {
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+            }
+
+            .close-filter {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
+
+            .overlay-commun.search-active {
+                display: block;
+            }
+
+            /* account page css */
+
+            .dash-bx {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+
+            .profile-bx {
+                padding: 20px;
+            }
+
+            .profile-menu {
+                margin-top: 0;
+                -ms-flex-item-align: end;
+                align-self: flex-end;
+                white-space: nowrap;
+            }
+
+            .profile-menu .profile-link-logout,
+            .profile-menu .profile-link {
+                display: inline-block;
+                border-radius: 20px 20px 0 0px;
+                margin-bottom: 0;
+            }
+
+            .profile-menu .profile-link-logout.active b:nth-child(1),
+            .profile-menu .profile-link.active b:nth-child(1) {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                bottom: 0px;
+                top: inherit;
+                background-color: #f9f9f9;
+                right: inherit;
+                left: -20px;
+            }
+
+            .profile-menu .profile-link-logout.active b:nth-child(1)::before,
+            .profile-menu .profile-link.active b:nth-child(1)::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #ffcf40;
+                border-radius: 0;
+                border-bottom-right-radius: 20px;
+            }
+
+            .profile-menu .profile-link-logout.active b:nth-child(2),
+            .profile-menu .profile-link.active b:nth-child(2) {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                bottom: 0px;
+                background-color: #f9f9f9;
+                right: -20px;
+            }
+
+            .profile-menu .profile-link-logout.active b:nth-child(2)::before,
+            .profile-menu .profile-link.active b:nth-child(2)::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #ffcf40;
+                border-radius: 0;
+                border-bottom-left-radius: 20px;
+            }
+
+
+            .dash-left {
+                width: 100% !important;
+                -webkit-box-flex: 0 !important;
+                -ms-flex: 0 0 100% !important;
+                flex: 0 0 100% !important;
+                height: auto !important;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                position: relative !important;
+                top: 0 !important;
+                z-index: 1;
+            }
+
+            /* site map */
+            .sitemap-ul li {
+                width: 32%;
+            }
+
+
+            .product-top-bx-2,
+            .product-top-bx {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
+
+            .product-top-bx-scroll {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+
+        @media (max-width:900px) {
+            .profile-bx {
+                display: none;
+            }
+
+            .dash-left {
+                padding-top: 10px;
+                overflow: hidden;
+                overflow-x: auto;
+            }
+
+            .dash-left::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        @media (max-width:800px) {
+            .detail-bx {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+
+            .detail-right {
+                padding: 0 0px 0 0px;
+                margin-top: 30px;
+            }
+
+            .detail-left {
+                width: 100%;
+                margin: auto;
+                padding: 0 0;
+            }
+
+            /* site map */
+            .sitemap-ul li {
+                width: 49%;
+            }
+        }
+
+
+        @media (max-width:768px) {
+
+            .product-item a.view-btn,
+            .product-item a.add-to-wishlist {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+
+            .product-item a.view-btn {
+                top: 60px;
+            }
+
+            .category-slide {
+                padding: 0 0px;
+            }
+
+        }
+
+
+
+        @media screen and (max-width:576px) {
+            .detail-right .other-detail-terms p.features-p {
+                width: 100%;
+            }
+
+            .d-social-icon .social-link {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                font-size: 16px;
+                padding: 10px 10px;
+                margin-right: 0px;
+                margin: 3px 2px 0;
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+            }
+
+            .d-social-icon .social-link span {
+                display: none;
+            }
+
+            .category-footer {
+                display: inline-block;
+                border-right: 1px solid lightgray;
+                padding: 0px 10px;
+                margin-top: 10px;
+            }
+
+            .category-footer:last-child {
+                border-color: transparent;
+            }
+
+            .product-info .product-price-bx del.del-price,
+            .product-info .product-price-bx span.sell-price {
+                font-weight: 500;
+            }
+
+            .res-category-bx .res-menu-item-ul li a.res-navacc-link .item-count,
+            .res-menu-item-bx .res-menu-item-ul li a.res-navacc-link .item-count,
+            .icons-bx .icons-item>.item-count {
+                padding-top: 2px;
+            }
+
+            /* .video-slider-home{
+        display: none !important;
+    } */
+
+            .client-slide .client-slide-item,
+            .category-slide .category-slide-item {
+                padding: 20px 10px 20px;
+            }
+
+            .client-slide .client-slide-item h6,
+            .category-slide .category-slide-item h6 {
+                font-size: 14px;
+            }
+
+            .offer-banners {
+                flex-wrap: nowrap !important;
+            }
+
+            .icons-bx .icons-item {
+                padding: 17px 7px;
+            }
+        }
+
+
+        @media (max-width:460px) {
+            .cart-item {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+
+            .cart-item .cart-item-img {
+                margin: 0 auto 20px;
+            }
+
+            .cart-item .cart-item-detail {
+                padding: 0;
+            }
+
+            .cid-wishlist-btn {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width:429px) {
+            .sitemap-ul li {
+                width: 100%;
+            }
+        }
+
+        @media (max-width:420px) {
+
+            .product-item a.view-btn,
+            .product-item a.add-to-wishlist {
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+            }
+
+            .product-item a.view-btn {
+                top: 55px;
+            }
+
+            .icons-item.notifi-icons-item {
+                display: none;
+            }
+
+            /* .logo-bx img.desktop-logo {
+        display: none;
+    }
+    .logo-bx img.responsive-logo {
+        display: block;
+    } */
+            .icons-item.serach-modal,
+            .icons-item[href="/wishlist"] {
+                display: none;
+            }
+
+            #offer-banners {
+                flex-wrap: nowrap !important;
+                overflow: hidden !important;
+                overflow-x: auto !important;
+            }
+
+            #offer-banners .col-xsm-6 {
+                width: 340px !important;
+                flex: 0 0 340px !important;
+            }
+
+            #offer-banners .col-xsm-6 a {
+                margin-bottom: 15px !important;
+            }
+        }
+
+        @media (max-width:400px) {
+            .detail-right .add-wishlist-btn span {
+                display: none;
+            }
+
+            .detail-right .add-wishlist-btn .pe-7s-like {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width:360px) {
+            /* .logo-bx img.img.desktop-logo {
+        width: 120px;
+    } */
+
+            .icons-item .drop-down-list {
+                right: inherit;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+            }
+
+            .product-info a.add-to-cart {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="owl-carousel">
+        <!-- <div class=" handpicked-items py-2">
+            <a href="">
+                <div class="handi-img-wraper">
+                    <img class="main-img" src="https://tikasaheb.com/imgs/products/thumb/360/73-1007.jpg?v=1657883750"
+                        alt="">
+
+                    <img class="hover-img" src="https://tikasaheb.com/imgs/products/thumb/360/73-1008.jpg?v=1657883750"
+                        alt="">
+                </div>
+                <div class="handi-info">
+                    <div class="handi-name">
+                        Blue Lining Unisex Half Sleeve Shirt
+                    </div>
+                    <div class="handi-price">
+                        <span class="sell-price">
+                            ₹1450
+                        </span>
+                        <del class="del-price">
+                            ₹1600
+                        </del>
+                    </div>
+                    <a class="add-to-cart" href="">
+                        <i class="cart-icon pe-7s-shopbag"></i>
+                        Add To Cart
+                    </a>
+                </div>
+                <a class="add-to-wishlist " href="">
+                    <i class="wishlist-icon pe-7s-like"></i>
+                </a>
+                <a class="view-btn" href="">
+                    <i class="view-icon pe-7s-look"></i>
+                </a>
+            </a>
+        </div>
+        <div class=" handpicked-items py-2">
+            <a href="">
+                <div class="handi-img-wraper">
+                    <img class="main-img" src="https://tikasaheb.com/imgs/products/thumb/360/70-987.jpg?v=1657883768"
+                        alt="">
+
+                    <img class="hover-img" src="https://tikasaheb.com/imgs/products/thumb/360/70-988.jpg?v=1657883768"
+                        alt="">
+                </div>
+                <div class="handi-info">
+                    <div class="handi-name">
+                        Multi Color Unisex Half Sleeve Shirt
+                    </div>
+                    <div class="handi-price">
+                        <span class="sell-price">
+                            ₹1000
+                        </span>
+                        <del class="del-price">
+                            ₹1200
+                        </del>
+                    </div>
+                    <a class="add-to-cart" href="">
+                        <i class="cart-icon pe-7s-shopbag"></i>
+                        Add To Cart
+                    </a>
+                </div>
+                <a class="add-to-wishlist " href="">
+                    <i class="wishlist-icon pe-7s-like"></i>
+                </a>
+                <a class="view-btn" href="">
+                    <i class="view-icon pe-7s-look"></i>
+                </a>
+            </a>
+        </div>
+        <div class=" handpicked-items py-2">
+            <a href="">
+                <div class="handi-img-wraper">
+                    <img class="main-img" src="https://tikasaheb.com/imgs/products/thumb/360/67-973.jpg?v=1657883805"
+                        alt="">
+
+                    <img class="hover-img" src="https://tikasaheb.com/imgs/products/thumb/360/67-972.jpg?v=1657883805"
+                        alt="">
+                </div>
+                <div class="handi-info">
+                    <div class="handi-name">
+                        Black Full Sleeve Unisex Shirt
+                    </div>
+                    <div class="handi-price">
+                        <span class="sell-price">
+                            ₹1300
+                        </span>
+                        <del class="del-price">
+                            ₹1500
+                        </del>
+                    </div>
+                    <a class="add-to-cart" href="">
+                        <i class="cart-icon pe-7s-shopbag"></i>
+                        Add To Cart
+                    </a>
+                </div>
+                <a class="add-to-wishlist " href="">
+                    <i class="wishlist-icon pe-7s-like"></i>
+                </a>
+                <a class="view-btn" href="">
+                    <i class="view-icon pe-7s-look"></i>
+                </a>
+            </a>
+        </div>
+        <div class=" handpicked-items py-2">
+            <a href="">
+                <div class="handi-img-wraper">
+                    <img class="main-img" src="https://tikasaheb.com/imgs/products/thumb/360/63-645.jpg?v=1660307957"
+                        alt="">
+
+                    <img class="hover-img" src="https://tikasaheb.com/imgs/products/thumb/360/63-831.jpg?v=1660307957"
+                        alt="">
+                </div>
+                <div class="handi-info">
+                    <div class="handi-name">
+                        Pista Semi Stiched Kurti
+                    </div>
+                    <div class="handi-price">
+                        <span class="sell-price">
+                            ₹2150
+                        </span>
+                        <del class="del-price">
+                            ₹2550
+                        </del>
+                    </div>
+                    <a class="add-to-cart" href="">
+                        <i class="cart-icon pe-7s-shopbag"></i>
+                        Add To Cart
+                    </a>
+                </div>
+                <a class="add-to-wishlist " href="">
+                    <i class="wishlist-icon pe-7s-like"></i>
+                </a>
+                <a class="view-btn" href="">
+                    <i class="view-icon pe-7s-look"></i>
+                </a>
+            </a>
+        </div>
+        <div class=" handpicked-items py-2">
+            <a href="">
+                <div class="handi-img-wraper">
+                    <img class="main-img" src="https://tikasaheb.com/imgs/products/thumb/360/57-690.jpg?v=1660307704"
+                        alt="">
+
+                    <img class="hover-img" src="https://tikasaheb.com/imgs/products/thumb/360/57-856.jpg?v=1660307704  "
+                        alt="">
+                </div>
+                <div class="handi-info">
+                    <div class="handi-name">
+                        Peach Crape Kurti
+                    </div>
+                    <div class="handi-price">
+                        <span class="sell-price">
+                            ₹4250
+                        </span>
+                        <del class="del-price">
+                            ₹5000
+                        </del>
+                    </div>
+                    <a class="add-to-cart" href="">
+                        <i class="cart-icon pe-7s-shopbag"></i>
+                        Add To Cart
+                    </a>
+                </div>
+                <a class="add-to-wishlist " href="">
+                    <i class="wishlist-icon pe-7s-like"></i>
+                </a>
+                <a class="view-btn" href="">
+                    <i class="view-icon pe-7s-look"></i>
+                </a>
+            </a>
+        </div>
+        <div class=" handpicked-items py-2">
+            <a href="">
+                <div class="handi-img-wraper">
+                    <img class="main-img" src="https://tikasaheb.com/imgs/products/thumb/360/54-710.jpg?v=1660307823"
+                        alt="">
+
+                    <img class="hover-img" src="https://tikasaheb.com/imgs/products/thumb/360/54-871.jpg?v=1660307823"
+                        alt="">
+                </div>
+                <div class="handi-info">
+                    <div class="handi-name">
+                        Turquoise Flower Pattern Kurti
+                    </div>
+                    <div class="handi-price">
+                        <span class="sell-price">
+                            ₹1450
+                        </span>
+                        <del class="del-price">
+                            ₹1600
+                        </del>
+                    </div>
+                    <a class="add-to-cart" href="">
+                        <i class="cart-icon pe-7s-shopbag"></i>
+                        Add To Cart
+                    </a>
+                </div>
+                <a class="add-to-wishlist " href="">
+                    <i class="wishlist-icon pe-7s-like"></i>
+                </a>
+                <a class="view-btn" href="">
+                    <i class="view-icon pe-7s-look"></i>
+                </a>
+            </a>
+        </div>
+        <div class=" handpicked-items py-2">
+            <a href="">
+                <div class="handi-img-wraper">
+                    <img class="main-img" src="https://tikasaheb.com/imgs/products/thumb/360/53-720.jpg?v=1661758775"
+                        alt="">
+
+                    <img class="hover-img" src="https://tikasaheb.com/imgs/products/thumb/360/53-876.jpg?v=1661758775"
+                        alt="">
+                </div>
+                <div class="handi-info">
+                    <div class="handi-name">
+                        Peach Kurti
+                    </div>
+                    <div class="handi-price">
+                        <span class="sell-price">
+                            ₹1100
+                        </span>
+                        <del class="del-price">
+                            ₹1250
+                        </del>
+                    </div>
+                    <a class="add-to-cart" href="">
+                        <i class="cart-icon pe-7s-shopbag"></i>
+                        Add To Cart
+                    </a>
+                </div>
+                <a class="add-to-wishlist " href="">
+                    <i class="wishlist-icon pe-7s-like"></i>
+                </a>
+                <a class="view-btn" href="">
+                    <i class="view-icon pe-7s-look"></i>
+                </a>
+            </a>
+        </div>
+        <div class=" handpicked-items py-2">
+            <a href="">
+                <div class="handi-img-wraper">
+                    <img class="main-img" src="https://tikasaheb.com/imgs/products/thumb/360/48-905.jpg?v=1661758675"
+                        alt="">
+
+                    <img class="hover-img" src="https://tikasaheb.com/imgs/products/thumb/360/48-906.jpg?v=1661758675"
+                        alt="">
+                </div>
+                <div class="handi-info">
+                    <div class="handi-name">
+                        Peach Kurti
+                    </div>
+                    <div class="handi-price">
+                        <span class="sell-price">
+                            ₹1100
+                        </span>
+                        <del class="del-price">
+                            ₹1250
+                        </del>
+                    </div>
+                    <a class="add-to-cart" href="">
+                        <i class="cart-icon pe-7s-shopbag"></i>
+                        Add To Cart
+                    </a>
+                </div>
+                <a class="add-to-wishlist " href="">
+                    <i class="wishlist-icon pe-7s-like"></i>
+                </a>
+                <a class="view-btn" href="">
+                    <i class="view-icon pe-7s-look"></i>
+                </a>
+            </a>
+        </div> -->
+
+
+        <div class="product-item">
+            <a class="product-imgs" href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                <img class="product-main-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-645.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+                <img class="product-hover-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-831.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+            </a>
+            <div class="product-info">
+                <a href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                    <div class="start-bx">
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon pe-7s-star"></i>
+                    </div>
+                    <p class="product-name">Pista Semi Stiched Kurti</p>
+                    <div class="product-price-bx">
+                        <span class="sell-price">₹2150</span>
+                        <del class="del-price ">₹2550</del>
+                    </div>
+                </a>
+                <a class="add-to-cart" onclick="addTocart(63,81,this,1)" href="javascript:void(0);"><i
+                        class="cart-icon pe-7s-shopbag"></i> Add To Cart</a>
+            </div>
+            <a class="add-to-wishlist " onclick="addToFavourite(63,this)" href="javascript:void(0);"><i
+                    class="wishlist-icon pe-7s-like"></i></a>
+            <a class="view-btn" href="https://tikasaheb.com/pista-semi-stiched-kurti"><i
+                    class="view-icon pe-7s-look"></i></a>
+        </div>
+        <div class="product-item">
+            <a class="product-imgs" href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                <img class="product-main-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-645.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+                <img class="product-hover-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-831.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+            </a>
+            <div class="product-info">
+                <a href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                    <div class="start-bx">
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon pe-7s-star"></i>
+                    </div>
+                    <p class="product-name">Pista Semi Stiched Kurti</p>
+                    <div class="product-price-bx">
+                        <span class="sell-price">₹2150</span>
+                        <del class="del-price ">₹2550</del>
+                    </div>
+                </a>
+                <a class="add-to-cart" onclick="addTocart(63,81,this,1)" href="javascript:void(0);"><i
+                        class="cart-icon pe-7s-shopbag"></i> Add To Cart</a>
+            </div>
+            <a class="add-to-wishlist " onclick="addToFavourite(63,this)" href="javascript:void(0);"><i
+                    class="wishlist-icon pe-7s-like"></i></a>
+            <a class="view-btn" href="https://tikasaheb.com/pista-semi-stiched-kurti"><i
+                    class="view-icon pe-7s-look"></i></a>
+        </div>
+        <div class="product-item">
+            <a class="product-imgs" href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                <img class="product-main-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-645.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+                <img class="product-hover-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-831.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+            </a>
+            <div class="product-info">
+                <a href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                    <div class="start-bx">
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon pe-7s-star"></i>
+                    </div>
+                    <p class="product-name">Pista Semi Stiched Kurti</p>
+                    <div class="product-price-bx">
+                        <span class="sell-price">₹2150</span>
+                        <del class="del-price ">₹2550</del>
+                    </div>
+                </a>
+                <a class="add-to-cart" onclick="addTocart(63,81,this,1)" href="javascript:void(0);"><i
+                        class="cart-icon pe-7s-shopbag"></i> Add To Cart</a>
+            </div>
+            <a class="add-to-wishlist " onclick="addToFavourite(63,this)" href="javascript:void(0);"><i
+                    class="wishlist-icon pe-7s-like"></i></a>
+            <a class="view-btn" href="https://tikasaheb.com/pista-semi-stiched-kurti"><i
+                    class="view-icon pe-7s-look"></i></a>
+        </div>
+        <div class="product-item">
+            <a class="product-imgs" href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                <img class="product-main-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-645.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+                <img class="product-hover-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-831.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+            </a>
+            <div class="product-info">
+                <a href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                    <div class="start-bx">
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon pe-7s-star"></i>
+                    </div>
+                    <p class="product-name">Pista Semi Stiched Kurti</p>
+                    <div class="product-price-bx">
+                        <span class="sell-price">₹2150</span>
+                        <del class="del-price ">₹2550</del>
+                    </div>
+                </a>
+                <a class="add-to-cart" onclick="addTocart(63,81,this,1)" href="javascript:void(0);"><i
+                        class="cart-icon pe-7s-shopbag"></i> Add To Cart</a>
+            </div>
+            <a class="add-to-wishlist " onclick="addToFavourite(63,this)" href="javascript:void(0);"><i
+                    class="wishlist-icon pe-7s-like"></i></a>
+            <a class="view-btn" href="https://tikasaheb.com/pista-semi-stiched-kurti"><i
+                    class="view-icon pe-7s-look"></i></a>
+        </div>
+        <div class="product-item">
+            <a class="product-imgs" href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                <img class="product-main-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-645.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+                <img class="product-hover-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-831.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+            </a>
+            <div class="product-info">
+                <a href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                    <div class="start-bx">
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon pe-7s-star"></i>
+                    </div>
+                    <p class="product-name">Pista Semi Stiched Kurti</p>
+                    <div class="product-price-bx">
+                        <span class="sell-price">₹2150</span>
+                        <del class="del-price ">₹2550</del>
+                    </div>
+                </a>
+                <a class="add-to-cart" onclick="addTocart(63,81,this,1)" href="javascript:void(0);"><i
+                        class="cart-icon pe-7s-shopbag"></i> Add To Cart</a>
+            </div>
+            <a class="add-to-wishlist " onclick="addToFavourite(63,this)" href="javascript:void(0);"><i
+                    class="wishlist-icon pe-7s-like"></i></a>
+            <a class="view-btn" href="https://tikasaheb.com/pista-semi-stiched-kurti"><i
+                    class="view-icon pe-7s-look"></i></a>
+        </div>
+        <div class="product-item">
+            <a class="product-imgs" href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                <img class="product-main-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-645.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+                <img class="product-hover-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-831.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+            </a>
+            <div class="product-info">
+                <a href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                    <div class="start-bx">
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon pe-7s-star"></i>
+                    </div>
+                    <p class="product-name">Pista Semi Stiched Kurti</p>
+                    <div class="product-price-bx">
+                        <span class="sell-price">₹2150</span>
+                        <del class="del-price ">₹2550</del>
+                    </div>
+                </a>
+                <a class="add-to-cart" onclick="addTocart(63,81,this,1)" href="javascript:void(0);"><i
+                        class="cart-icon pe-7s-shopbag"></i> Add To Cart</a>
+            </div>
+            <a class="add-to-wishlist " onclick="addToFavourite(63,this)" href="javascript:void(0);"><i
+                    class="wishlist-icon pe-7s-like"></i></a>
+            <a class="view-btn" href="https://tikasaheb.com/pista-semi-stiched-kurti"><i
+                    class="view-icon pe-7s-look"></i></a>
+        </div>
+        <div class="product-item">
+            <a class="product-imgs" href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                <img class="product-main-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-645.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+                <img class="product-hover-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-831.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+            </a>
+            <div class="product-info">
+                <a href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                    <div class="start-bx">
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon pe-7s-star"></i>
+                    </div>
+                    <p class="product-name">Pista Semi Stiched Kurti</p>
+                    <div class="product-price-bx">
+                        <span class="sell-price">₹2150</span>
+                        <del class="del-price ">₹2550</del>
+                    </div>
+                </a>
+                <a class="add-to-cart" onclick="addTocart(63,81,this,1)" href="javascript:void(0);"><i
+                        class="cart-icon pe-7s-shopbag"></i> Add To Cart</a>
+            </div>
+            <a class="add-to-wishlist " onclick="addToFavourite(63,this)" href="javascript:void(0);"><i
+                    class="wishlist-icon pe-7s-like"></i></a>
+            <a class="view-btn" href="https://tikasaheb.com/pista-semi-stiched-kurti"><i
+                    class="view-icon pe-7s-look"></i></a>
+        </div>
+        <div class="product-item">
+            <a class="product-imgs" href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                <img class="product-main-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-645.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+                <img class="product-hover-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-831.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+            </a>
+            <div class="product-info">
+                <a href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                    <div class="start-bx">
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon pe-7s-star"></i>
+                    </div>
+                    <p class="product-name">Pista Semi Stiched Kurti</p>
+                    <div class="product-price-bx">
+                        <span class="sell-price">₹2150</span>
+                        <del class="del-price ">₹2550</del>
+                    </div>
+                </a>
+                <a class="add-to-cart" onclick="addTocart(63,81,this,1)" href="javascript:void(0);"><i
+                        class="cart-icon pe-7s-shopbag"></i> Add To Cart</a>
+            </div>
+            <a class="add-to-wishlist " onclick="addToFavourite(63,this)" href="javascript:void(0);"><i
+                    class="wishlist-icon pe-7s-like"></i></a>
+            <a class="view-btn" href="https://tikasaheb.com/pista-semi-stiched-kurti"><i
+                    class="view-icon pe-7s-look"></i></a>
+        </div>
+        <div class="product-item">
+            <a class="product-imgs" href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                <img class="product-main-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-645.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+                <img class="product-hover-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-831.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+            </a>
+            <div class="product-info">
+                <a href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                    <div class="start-bx">
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon pe-7s-star"></i>
+                    </div>
+                    <p class="product-name">Pista Semi Stiched Kurti</p>
+                    <div class="product-price-bx">
+                        <span class="sell-price">₹2150</span>
+                        <del class="del-price ">₹2550</del>
+                    </div>
+                </a>
+                <a class="add-to-cart" onclick="addTocart(63,81,this,1)" href="javascript:void(0);"><i
+                        class="cart-icon pe-7s-shopbag"></i> Add To Cart</a>
+            </div>
+            <a class="add-to-wishlist " onclick="addToFavourite(63,this)" href="javascript:void(0);"><i
+                    class="wishlist-icon pe-7s-like"></i></a>
+            <a class="view-btn" href="https://tikasaheb.com/pista-semi-stiched-kurti"><i
+                    class="view-icon pe-7s-look"></i></a>
+        </div>
+        <div class="product-item">
+            <a class="product-imgs" href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                <img class="product-main-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-645.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+                <img class="product-hover-img"
+                    src="https://tikasaheb.com/imgs/products/thumb/360/63-831.jpg?v=1660307957"
+                    alt="Pista Semi Stiched Kurti">
+            </a>
+            <div class="product-info">
+                <a href="https://tikasaheb.com/pista-semi-stiched-kurti">
+                    <div class="start-bx">
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon active pe-7s-star"></i>
+                        <i class="start-icon pe-7s-star"></i>
+                    </div>
+                    <p class="product-name">Pista Semi Stiched Kurti</p>
+                    <div class="product-price-bx">
+                        <span class="sell-price">₹2150</span>
+                        <del class="del-price ">₹2550</del>
+                    </div>
+                </a>
+                <a class="add-to-cart" onclick="addTocart(63,81,this,1)" href="javascript:void(0);"><i
+                        class="cart-icon pe-7s-shopbag"></i> Add To Cart</a>
+            </div>
+            <a class="add-to-wishlist " onclick="addToFavourite(63,this)" href="javascript:void(0);"><i
+                    class="wishlist-icon pe-7s-like"></i></a>
+            <a class="view-btn" href="https://tikasaheb.com/pista-semi-stiched-kurti"><i
+                    class="view-icon pe-7s-look"></i></a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            // autoplay: true,
+            // autoplayTimeout: 1000,
+            responsive: {
+                568: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
