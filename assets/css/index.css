@@ -43,6 +43,8 @@ header {
     transition: transform .3s ease-in-out;
     top: 0;
     background: white;
+    -webkit-box-shadow: 0px 5px 20px rgb(95 107 125 / 15%);
+    box-shadow: 0px 5px 20px rgb(95 107 125 / 15%);
 }
 
 nav {
