@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="Icon-font-7-stroke-PIXEDEN-v-1.2.0/assets/Pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
+    <!-- <link rel="stylesheet" href="assets/css/index.css"> -->
+    <link rel="stylesheet" href="assets/css/contact-us.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <title>Document</title>
+    <link href="https://embedsocial.com/cdn/fonts/roboto/stylesheet.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/wokiee.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="assets/imgs/logo.png" alt="Logo"></a>
+            </div>
+            <div class="nav-menu-items">
+                <ul>
+                    <li><a href="#">Indian</a></li>
+                    <li><a href="#">Indo-Western</a></li>
+                    <li><a href="#">Casual</a></li>
+                    <li><a href="#">Sale</a></li>
+                </ul>
+            </div>
+            <div class="nav-menus d-flex">
+                <div class="nav-menu-icons">
+                    <a href=""><i class="ii-icon pe-7s-user"></i>
+                        <div class="icon-hover">
+                            Sign In
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-menu-icons">
+                    <a href=""><i class="ii-icon pe-7s-shopbag"></i>
+                        <div class="icon-hover">
+                            Cart
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-menu-icons">
+                    <a href="" class="search-model"><i class="ii-icon pe-7s-like "></i>
+                        <div class="icon-hover">
+                            Wishlist
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-menu-icons">
+                    <a href="" class="search-model"><i class="ii-icon pe-7s-search "></i>
+                        <div class="icon-hover">
+                            Search
+                        </div>
+                    </a>
+                    </a>
+                </div>
+                <div class="menu-icon resp-menu-icon" onclick="openmenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-------------------------resposive-menu -------------------------------->
+
+    <section class="resposive-menu-bx " id="sidemenu">
+        <span class="dismiss closes-bgcb" style="left: 12px; top: 12px; width: 20px; height: 20px;"
+            onclick="closemenu()">
+            <span class="closes"></span>
+            <span class="closes"></span>
+        </span>
+        <a href="/" class="res-logo">
+            <img src="assets/imgs/logo.png" alt="">
+        </a>
+        <div class="res-menu-item-bx">
+            <ul class="res-menu-item-ul">
+                <h6>Categories</h6>
+                <li class="category-li">
+                    <a class="res-nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#harsh">Indian <svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="32" d="M368 368L144 144M368 144L144 368"></path>
+                        </svg>
+                    </a>
+                    <div class="drop-menu collapse" id="harsh">
+                        <a class="dm-link" href="">All<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a class="dm-link" href="">Sarees<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a class="dm-link" href="">Semi-Stitched Kurtis<i class="fa fa-angle-right"
+                                aria-hidden="true"></i></a>
+                        <a class="dm-link" href="">Kurtis<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </div>
+                </li>
+                <li class="category-li">
+                    <a class="res-nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#hm">Indo-Western <svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="32" d="M368 368L144 144M368 144L144 368"></path>
+                        </svg>
+                    </a>
+                    <div class="drop-menu collapse" id="hm">
+                        <a class="dm-link" href="">All<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a class="dm-link" href="">Corsets<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </div>
+                </li>
+                <li class="category-li">
+                    <a class="res-nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#mh">Casual <svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="32" d="M368 368L144 144M368 144L144 368"></path>
+                        </svg>
+                    </a>
+                    <div class="drop-menu collapse" id="mh">
+                        <a class="dm-link" href="">All<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a class="dm-link" href="">Shirts<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </div>
+                </li>
+                <li>
+                    <a class="res-nav-link" href="">Sale <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="res-menu-item-ul">
+                <h6>Company Info</h6>
+                <li><a class="res-nav-link active" href="index.html">Home<i class="fa fa-angle-right"
+                            aria-hidden="true"></i></a>
+                </li>
+                <li><a class="res-nav-link " href="">About<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <!-- <li><a class="res-nav-link res-product-link " href="/products">Product<i class="fa fa-angle-right" aria-hidden="true"></i></a></li> -->
+                <!--<li><a class="res-nav-link res-product-link  " href="javascript:void(0);">Category<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>-->
+                <li><a class="res-nav-link " href="">Media<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </li>
+                <li><a class="res-nav-link ds-css" href="">FAQ<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </li>
+                <li><a class="res-nav-link " href="">Privacy Policy<i class="fa fa-angle-right"
+                            aria-hidden="true"></i></a></li>
+                <li><a class="res-nav-link " href="/">Return Policy<i class="fa fa-angle-right"
+                            aria-hidden="true"></i></a></li>
+                <li><a class="res-nav-link ds-css" href="">Terms &amp; Conditions<i class="fa fa-angle-right"
+                            aria-hidden="true"></i></a></li>
+                <li><a class="res-nav-link " href="">Contact<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </li>
+                <!-- <li><a class="res-nav-link " href="/sitemap">Sitemap<i class="fa fa-angle-right" aria-hidden="true"></i></a></li> -->
+            </ul>
+            <ul class="res-menu-item-ul">
+                <h6>Account Info</h6>
+
+                <li><a class="res-navacc-link res-loginpopup" href="javascript:void(0);" data-toggle="modal"
+                        data-target="#loginModal"><i class="pe-7s-user"></i>Sign In</a></li>
+                <li><a class="res-navacc-link " href="/cart"><i class="pe-7s-shopbag"></i>Cart<span class="item-count"
+                            id="cartCountResp" style="">8</span></a></li>
+
+
+            </ul>
+        </div>
+        <div class="res-category-bx">
+            <div class="back-res-menu"><i class="fa fa-angle-left" aria-hidden="true"></i>Back</div>
+            <ul class="res-menu-item-ul">
+                <h6>Category</h6>
+                <!-- <li><a class="res-nav-link  " href="/products">All Product<i class="fa fa-angle-right" aria-hidden="true"></i></a></li> -->
+                <li><a class="res-nav-link" href="/indian">Indian<i class="fa fa-angle-right"
+                            aria-hidden="true"></i></a></li>
+                <li><a class="res-nav-link" href="/indo-western">Indo-Western<i class="fa fa-angle-right"
+                            aria-hidden="true"></i></a></li>
+                <li><a class="res-nav-link" href="/casual">Casual<i class="fa fa-angle-right"
+                            aria-hidden="true"></i></a></li>
+                <li><a class="res-nav-link" href="/sale">Sale<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="res-menu-social-link">
+            <a href="https://www.facebook.com/Tikasaheb-106893805263965/" target="_blank"><i
+                    class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/tikasaheb" target="_blank"><i class="fa-brands fa-twitter"
+                    aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/tikasaheb/" target="_blank"><i class="fa-brands fa-instagram"
+                    aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/company/tikasaheb/" target="_blank"><i class="fa-brands fa-linkedin"
+                    aria-hidden="true"></i></a>
+            <a href="https://pin.it/3C1H97E" target="_blank"><i class="fa-brands fa-pinterest-p"
+                    aria-hidden="true"></i></a>
+        </div>
+    </section>
+
+    <section class="menu-tab py-2 my-2">
+        <div class="container-lg">
+            <p class="pages-link">
+                <a href="index.html">Home</a>
+                <span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </span>
+                <a class="active-page" href="contact-us.html">Contact Us</a>
+            </p>
+        </div>
+    </section>
+    <section class="py-4 my-4">
+        <div class="container">
+            <div class="common-heading">
+                <h2 style="text-align: center;">
+                    Contact
+                </h2>
+                <p>
+                    Get in touch
+                </p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xl-5 col-md-8">
+                    <form class="custom-form row bootstrap-validator-form" method="POST" id="support_form"
+                        novalidate="novalidate">
+                        <div class="custom-form__group col-sm-12 form-group">
+                            <input type="text" name="name" id="fname" placeholder=" " required="">
+                            <label class="group__label" for="fname">Name</label>
+                            <small class="help-block" style="/* display: none; */"></small>
+                        </div>
+
+                        <div class="custom-form__group  col-sm-12 form-group">
+                            <input type="email" name="email" id="email" placeholder=" " required="">
+                            <label class="group__label" for="email">Email</label>
+                            <small class="help-block" style="display: none;"></small>
+                        </div>
+                        <div class="custom-form__group col-sm-12 form-group">
+                            <input type="text" name="mobile" id="phone" maxlength="10" placeholder=" " required="">
+                            <label class="group__label" for="phone">Phone</label>
+                            <small class="help-block" style="display: none;"></small>
+                        </div>
+                        <div class="custom-form__group col-12 form-group">
+                            <textarea name="message" rows="3" id="Message" placeholder=" " required=""></textarea>
+                            <label class="group__label" for="Message">Message</label>
+                            <small class="help-block" style="display: none;"></small>
+                        </div>
+                        <button type="submit" class="submit-btn mt-2"><span>Submit</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <footer class="main-footer pb-3 pt-5">
+        <div class="container-lg">
+            <div class="row footer-center">
+                <div class="col-lg-2 col-sm-4 col-12 mb-4">
+                    <h5 class="footer-hed">categories</h5>
+                    <a class="footer-hed-link category-footer" href="/indian">Indian</a>
+                    <a class="footer-hed-link category-footer" href="/indo-western">Indo-Western</a>
+                    <a class="footer-hed-link category-footer" href="/casual">Casual</a>
+                    <a class="footer-hed-link category-footer" href="/sale">Sale</a>
+                </div>
+
+                <div class="col-lg-2 col-sm-4 col-6 mb-4">
+                    <h5 class="footer-hed">Company info</h5>
+                    <a class="footer-hed-link active" href="/">Home</a>
+                    <a class="footer-hed-link " href="/about-us">About</a>
+                    <a class="footer-hed-link " href="/contact-us.html">Contact</a>
+                    <a class="footer-hed-link " href="/blog">Media</a>
+                    <a class="footer-hed-link ds-css" href="/faqs">FAQs</a>
+                </div>
+
+                <div class="col-lg-2 col-sm-4 col-6 mb-4">
+                    <h5 class="footer-hed border-0">&nbsp;</h5>
+                    <a class="footer-hed-link " href="/privacy-policy">Privacy Policy</a>
+                    <a class="footer-hed-link " href="/return-policy">Return Policy</a>
+                    <a class="footer-hed-link ds-css" href="/terms-conditions">Terms &amp; Conditions</a>
+                    <!-- <a class="footer-hed-link " href="/sitemap">Sitemap</a> -->
+                    <a class="footer-hed-link" href="/outfit-process">Outfit Process</a>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 mb-4">
+                    <h5 class="footer-hed">contact info</h5>
+                    <a class="footer-hed-link" href="tel:+918238230070">Phone: +91 8238230070</a>
+                    <a class="footer-hed-link" href="mailto:tikasaheb@gmail.com">Email: tikasaheb@gmail.com</a>
+                    <a class="footer-hed-link" href="javascript:void(0);">Address: 608, Colonnade - 2, B/H. Rajpath
+                        Club, Rajpath Rangoli Road, Bodakdev, Ahmedabad - 380054</a>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 mb-4">
+                    <h5 class="footer-hed">Sign Up For Our Newsletter</h5>
+                    <p class="pera-text">Get timely updates from your favorite brand!</p>
+                    <form class="col-lg-12 px-0 my-2 bootstrap-validator-form" id="subscribe_form"
+                        novalidate="novalidate">
+                        <div class="form-gorup-search form-group">
+                            <input type="text" name="email" placeholder="Enter Your Email" id="">
+                            <button type="submit"><i class="fa-regular fa-paper-plane" aria-hidden="true"></i></button>
+                            <small class="help-block" style="display: none;"></small>
+                        </div>
+                    </form>
+                    <!-- <p class="pera-text">Join over 120,000 subscribers!</p> -->
+                    <div class="footer-social-links">
+                        <a href="https://www.facebook.com/Tikasaheb-106893805263965/" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/tikasaheb" target="_blank"><i class="fa-brands fa-twitter"
+                                aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/tikasaheb/" target="_blank"><i class="fa-brands fa-instagram"
+                                aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/company/tikasaheb/" target="_blank"><i
+                                class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="https://pin.it/3C1H97E" target="_blank"><i class="fa-brands fa-pinterest-p"
+                                aria-hidden="true"></i></a>
+                    </div>
+                    <div class="tailor-icon">
+                        <img src="https://tikasaheb.com/img/tailor.png" alt="">
+                        <p>Custom Tailoring</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row footer-bottom justify-content-center align-items-center mt-1">
+                <div class="col-lg-6 text-lg-left">
+                    <p class="copyright">©2022 Tikasaheb. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-6 text-end text-lg-right ">
+                    <p class="mede-with">Made with <span class="icons-box-made"><i class="fa fa-heart"
+                                aria-hidden="true"></i><i class="fa fa-heart-o" aria-hidden="true"></i></span> by: <a
+                            href="https://pmcommu.com/" target="_blank">PM Communications</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-400px";
+        }
+    </script>
+</body>
+
+</html>
