@@ -6,309 +6,135 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.css">
-    <link rel="stylesheet" href="assets/css/wokiee.css">
-    <link rel="stylesheet" href="Icon-font-7-stroke-PIXEDEN-v-1.2.0/assets/Pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <!-- <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/css/lg-fb-comment-box.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/css/lg-transitions.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/css/lightgallery.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/fonts/lg.eot"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/fonts/lg.svg"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/fonts/lg.ttf"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/fonts/lg.woff"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/img/loading.gif"> -->
     <style>
-        .custom-form {
-            padding: 30px 30px;
-            background-color: #ffffff;
-            -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-            position: relative;
+        .item-slick.slick-slide.slick-current.slick-active {
+            outline: none !important;
         }
 
-        .contact-info-bx {
-            background: #ffcf40;
-            /* background: linear-gradient(-45deg, #000000 0%, #be1e2d 100%);  */
-            height: 100%;
-            padding: 30px 20px;
+        .slider-for {
+            margin-bottom: 15px;
         }
 
-        .contact-heading {
-            font-weight: 400;
-            color: #000000;
-            font-size: 20px;
-            position: relative;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-        }
-
-        .contact-info {
-            margin-bottom: 20px;
-        }
-
-        .contact-info p:nth-child(1) {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: start;
-            -ms-flex-pack: start;
-            justify-content: flex-start;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            color: #be1e2d;
-            font-weight: 400;
-            font-size: 14px;
-            margin: 0;
-            margin-bottom: 4px;
-            font-family: 'UniversLTStd';
-            width: -webkit-fit-content;
-            width: -moz-fit-content;
-            width: fit-content;
-            border-bottom: 1px dashed black;
-            padding-bottom: 4px;
-        }
-
-        .contact-info p:nth-child(1) .contact-icon {
-            margin-right: 4px;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .contact-info p:nth-child(2) {
-            color: black;
-            font-weight: 300;
-            font-size: 16px;
-            margin: 0;
-            margin-bottom: 6px;
-            padding-left: 21px;
-            opacity: 0.9;
-            letter-spacing: 0.5px;
-        }
-
-
-        .custom-form__group {
-            position: relative;
-            margin: 9px 0 9px;
-        }
-
-
-        .custom-form__group select,
-        .custom-form__group textarea,
-        .custom-form__group input {
-            font-weight: 400;
-            display: block;
-            color: #000000;
-            border: 0;
-            background-color: rgb(255 255 255);
-            border: 1.5px solid rgb(233 233 233);
-            padding: 0px 20px 0px 15px;
-            height: 43px;
-            font-size: 17px;
+        .slider-for img {
             width: 100%;
-            border-radius: 5px;
-            -webkit-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease;
-            transition: all 0.3s ease;
-            outline: none;
+            min-height: 100%;
         }
 
-        .custom-form__group textarea {
-            padding: 3px 15px 6px 15px;
-            height: auto;
+        .slider-nav {
+            margin: auto;
         }
 
-        .custom-form__group input[type="password"] {
-            padding: 0px 35px 0px 15px;
-            letter-spacing: 2px;
-        }
-
-        .custom-form__group .group__label {
-            position: absolute;
-            left: 25px;
-            top: 0px;
-            z-index: 1;
-            font-size: 18px;
-            color: #b2b3b3;
-            /* font-weight: 400; */
-            margin: 0;
-            padding: 0px 5px;
-            background: #ffffff;
-            border-radius: 3px;
-            -webkit-transform: translateY(8px);
-            -ms-transform: translateY(8px);
-            transform: translateY(8px);
-            -webkit-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease;
-            transition: all 0.3s ease;
-        }
-
-
-        .custom-form__group select::-webkit-input-placeholder,
-        .custom-form__group input::-webkit-input-placeholder,
-        .custom-form__group textarea::-webkit-input-placeholder {
-            color: #b2b3b3;
-            font-weight: 400;
-        }
-
-
-        .custom-form__group select::-moz-placeholder,
-        .custom-form__group input::-moz-placeholder,
-        .custom-form__group textarea::-moz-placeholder {
-            color: #b2b3b3;
-            font-weight: 400;
-        }
-
-
-        .custom-form__group select:-ms-input-placeholder,
-        .custom-form__group input:-ms-input-placeholder,
-        .custom-form__group textarea:-ms-input-placeholder {
-            color: #b2b3b3;
-            font-weight: 400;
-        }
-
-
-        .custom-form__group select::-ms-input-placeholder,
-        .custom-form__group input::-ms-input-placeholder,
-        .custom-form__group textarea::-ms-input-placeholder {
-            color: #b2b3b3;
-            font-weight: 400;
-        }
-
-
-        .custom-form__group select::placeholder,
-        .custom-form__group input::placeholder,
-        .custom-form__group textarea::placeholder {
-            color: #b2b3b3;
-            font-weight: 400;
-        }
-
-        .custom-form__group select:focus+.group__label,
-        .custom-form__group select:hover+.group__label,
-        .custom-form__group textarea:focus+.group__label,
-        .custom-form__group textarea:hover+.group__label,
-        .custom-form__group input:focus+.group__label,
-        .custom-form__group input:hover+.group__label {
-            color: #b2b3b3;
-        }
-
-        .custom-form__group select:focus,
-        .custom-form__group select:hover,
-        .custom-form__group textarea:focus,
-        .custom-form__group textarea:hover,
-        .custom-form__group input:focus,
-        .custom-form__group input:hover {
-            border-color: #be1e2d;
-            outline: none;
-        }
-
-        .custom-form__group select:not(:placeholder-shown),
-        .custom-form__group textarea:not(:placeholder-shown),
-        .custom-form__group input:not(:placeholder-shown) {
-            border-color: #be1e2d;
-        }
-
-        .custom-form__group select:not(:placeholder-shown)+.group__label,
-        .custom-form__group select:focus+.group__label,
-        .custom-form__group textarea:not(:placeholder-shown)+.group__label,
-        .custom-form__group textarea:focus+.group__label,
-        .custom-form__group input:not(:placeholder-shown)+.group__label,
-        .custom-form__group input:focus+.group__label {
-            -webkit-transform: translateY(-9px);
-            -ms-transform: translateY(-9px);
-            transform: translateY(-9px);
-            color: #be1e2d;
-            font-size: 12px;
-        }
-
-        .custom-form__group input:-webkit-autofill,
-        .custom-form__group input:-webkit-autofill:hover,
-        .custom-form__group input:-webkit-autofill:focus,
-        .custom-form__group input:-webkit-autofill:active {
-            box-shadow: 0 0 0 30px rgb(255 255 255) inset !important;
-            -webkit-box-shadow: 0 0 0 30px rgb(255 255 255) inset !important;
-        }
-
-        .custom-form__group .view-pass {
-            position: absolute;
-            top: 3px;
-            right: 17px;
-            color: gray;
-            font-size: 16px;
+        .slider-nav .item-slick {
+            max-width: 240px;
+            margin-right: 15px;
+            outline: none !important;
             cursor: pointer;
-            -webkit-transition: all 0.3s;
-            -o-transition: all 0.3s;
-            transition: all 0.3s;
-            width: 33px;
-            height: 37px;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
         }
 
-        .custom-form__group .view-pass:hover {
-            color: #be1e2d;
+        .slider-nav .item-slick img {
+            max-width: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slick-arrow {
+            position: absolute;
+            top: 50%;
+            z-index: 50;
+            margin-top: -12px;
+        }
+
+        .slick-prev {
+            left: 0;
+        }
+
+        .slick-next {
+            right: 0;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-5 col-md-8">
-                <form class="custom-form row bootstrap-validator-form" method="POST" id="support_form"
-                    novalidate="novalidate">
-                    <div class="custom-form__group col-sm-12 form-group">
-                        <input type="text" name="name" id="fname" placeholder=" " required="">
-                        <label class="group__label" for="fname">Name</label>
-                        <small class="help-block" style="/* display: none; */"></small>
-                    </div>
+    <div id="aniimated-thumbnials" class="slider-for">
 
-                    <div class="custom-form__group  col-sm-12 form-group">
-                        <input type="email" name="email" id="email" placeholder=" " required="">
-                        <label class="group__label" for="email">Email</label>
-                        <small class="help-block" style="display: none;"></small>
-                    </div>
-                    <div class="custom-form__group col-sm-12 form-group">
-                        <input type="text" name="mobile" id="phone" maxlength="10" placeholder=" " required="">
-                        <label class="group__label" for="phone">Phone</label>
-                        <small class="help-block" style="display: none;"></small>
-                    </div>
-                    <div class="custom-form__group col-12 form-group">
-                        <textarea name="message" rows="3" id="Message" placeholder=" " required=""></textarea>
-                        <label class="group__label" for="Message">Message</label>
-                        <small class="help-block" style="display: none;"></small>
-                    </div>
-                    <button type="submit" class="commun-btn mt-2"><span>Submit</span></button>
-                </form>
-            </div>
-            <div class="col-xl-3 col-md-4 px-0">
-                <div class="contact-info-bx">
-                    <h5 class="contact-heading">Contact Info</h5>
 
-                    <!-- <div class="contact-info">
-                      <p><i class="contact-icon pe-7s-ribbon"></i>Company Name</p>
-                      <p>Tikasaheb</p>
-                    </div> -->
+        <a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg">
+            <img src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg" />
+        </a>
+        <a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg">
+            <img src="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg" />
+        </a>
+        <a href="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg">
+            <img src="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg" />
+        </a>
+        <a href="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_b.jpg">
+            <img src="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_b.jpg" />
+        </a>
 
-                    <div class="contact-info">
-                        <p><i class="contact-icon pe-7s-mail"></i>Email</p>
-                        <p>tikasaheb@gmail.com</p>
-                    </div>
-
-                    <div class="contact-info">
-                        <p><i class="contact-icon pe-7s-call"></i>Phone</p>
-                        <p>+91 8238230070</p>
-                    </div>
-
-                    <div class="contact-info">
-                        <p><i class="contact-icon pe-7s-map-marker"></i>Location</p>
-                        <p>608, Colonnade - 2, B/H. Rajpath Club, Rajpath Rangoli Road, Bodakdev, Ahmedabad - 380054</p>
-                    </div>
-
-                </div>
-            </div>
+    </div>
+    <div class="slider-nav">
+        <div class="item-slick">
+            <img src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg" alt="Alt">
+        </div>
+        <div class="item-slick">
+            <img src="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg" alt="Alt">
+        </div>
+        <div class="item-slick">
+            <img src="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg" alt="Alt">
+        </div>
+        <div class="item-slick">
+            <img src="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_b.jpg" alt="Alt">
         </div>
     </div>
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/js/lightgallery-all.min.js"></script>
+
+    <script>
+        $(function () {
+
+            $('#aniimated-thumbnials').lightGallery({
+                thumbnail: true,
+            });
+            // Card's slider
+            var $carousel = $('.slider-for');
+
+            $carousel
+                .slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    fade: true,
+                    adaptiveHeight: true,
+                    asNavFor: '.slider-nav'
+                });
+            $('.slider-nav').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                dots: false,
+                centerMode: false,
+                focusOnSelect: true,
+                variableWidth: true
+            });
+
+
+        });
+    </script>
 </body>
 
 </html>
