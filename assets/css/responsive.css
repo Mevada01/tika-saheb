@@ -113,6 +113,13 @@
     opacity: 1;
     visibility: visible;
   }
+  
+}
+
+@media screen and (max-width:768px){
+  .detail-right{
+    margin-top:20px ;
+  }
 }
 
 
@@ -120,6 +127,7 @@
   .handi-info .add-to-cart {
     font-size: 12px;
   }
+  
 }
 
 
