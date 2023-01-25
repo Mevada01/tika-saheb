@@ -1868,3 +1868,89 @@ a.add-to-wishlist {
 .handpicked-items a.view-btn {
     top: 65px;
 }
+
+
+
+.prev_arrow:before,
+.next_arrow:before {
+    font-weight: bold;
+    /* padding: 0 !important; */
+    border-radius: 50%;
+    color: currentColor;
+    font-size: 20px;
+}
+
+.prev_arrow {
+    padding: 0 !important;
+    border-radius: 50%;
+    color: red;
+    background: #eee;
+    /* font-size: 20px; */
+
+}
+
+.prev_arrow:hover,
+.next_arrow:hover {
+    /* border-radius: 50%; */
+    background: #be1e2d !important;
+    color: white !important;
+}
+
+div.reviews-s-bx i,
+.detail-right p.reviews-bx i {
+    color: #cfcfcf;
+    font-size: 16px;
+    margin-right: 2px;
+}
+
+.prev_arrow,
+.next_arrow {
+    width: 30px;
+    height: 30px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    color: #be1e2d;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+    color: #000 !important;
+    opacity: 0.7;
+    -webkit-box-shadow: 0 0 50px rgb(0 0 0 / 20%);
+    box-shadow: 0 0 50px rgb(0 0 0 / 20%);
+}
+
+
+.prev_arrow,
+.next_arrow {
+    z-index: 20;
+
+}
+
+.next_arrow {
+    position: absolute;
+    right: 30px;
+    top: 40%;
+}
+
+.prev_arrow {
+    position: absolute;
+    left: 30px;
+    top: 40%;
+}
+
+
+.slick-slider .slick-arrow {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    transform: scale(1.2);
+}
+
+.slick-slider:hover .slick-arrow {
+    visibility: visible;
+    opacity: 1;
+}
+
+.slick-dots {
+    bottom: 10px;
+}
